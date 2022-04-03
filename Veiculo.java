@@ -1,4 +1,8 @@
-public class Veiculo{               //CLASSE VEICULO
+/**
+ *
+ * @author Znoque
+ */
+public class Veiculo {
     private int id;                 //VARIAVEL ID DO TIPO INTEIRO
     private String nome;            //VARIAVEL NOME DO TIPO TEXTO
     private String fabricante;      //VARIAVEL FABRICANTE DO TIPO TEXTO
@@ -10,109 +14,101 @@ public class Veiculo{               //CLASSE VEICULO
     private boolean alugado;        //VARIAVEL ALUGADO DO TIPO BOLEANO
     private double val_alug;        //VARIAVEL VALOR ALUGADO DO TIPO DOUBLE
 
-    //METÓDO CONSTRUTOR VAZIO
-    public Veiculo(){ 
-        
+    public Veiculo() {
     }
 
-    //CONSULTAR ID
-    public int getId(){
-        return this.id;
-    }
-
-    //ALTERAR ID
-    public void setId(int new_id){
-        this.id = new_id;
-    }
-
-    //CONSULTAR NOME
-    public String getNome(){
-        return this.nome;
-    }
-
-    //ALTERAR NOME
-    public void setNome(String new_nome){
-        this.nome = new_nome;
-    }
-
-    //CONSULTAR FABRICANTE
-    public String getFabricante(){
-        return this.fabricante;
-    }
-
-    //ALTERAR FABRICNATE
-    public void setFabricante(String new_fabricante){
-        this.fabricante = new_fabricante;
-    }
-
-    //CONSULTAR MODELO
-    public String getModelo(){
-        return this.modelo;
-    }
-
-    //ALTERAR MODELO
-    public void setModelo(String new_modelo){
-        this.modelo = new_modelo;
-    }
-
-    //CONSULTAR COR
-    public String getCor(){
-        return this.cor;
-    }
-
-    //ALTERAR COR
-    public void setCor(String new_cor){
-        this.cor = new_cor;
+    public Veiculo(int id, String nome, String fabricante, String modelo, String cor, String placa, String chassi, int ano_fab, boolean alugado, double val_alug) {
+        this.id = id;
+        this.nome = nome;
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.placa = placa;
+        this.chassi = chassi;
+        this.ano_fab = ano_fab;
+        this.alugado = alugado;
+        this.val_alug = val_alug;
     }
     
-    //CONSULTAR PLACA
-    public String getPlaca(){
-        return this.placa;
+    public int getId() {
+        return id;
     }
 
-    //ALTERAR PLACA
-    public void setPlaca(String new_placa){
-        this.placa = new_placa;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    //CONSULTAR CHASSI
-    public String getChassi(){
-        return this.chassi;
+    public String getNome() {
+        return nome;
     }
 
-    //ALTERAR CHASSI
-    public void setChassi(String new_chassi){
-        this.chassi = new_chassi;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    //CONSULTAR ANO DE FABRICACAO
-    public int getAno_fab(){
-        return this.ano_fab;
+    public String getFabricante() {
+        return fabricante;
     }
 
-    //ALTERAR ANO DE FABRICACAO
-    public void setAno_fab(int new_ano_fab){
-        this.ano_fab = new_ano_fab;
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
     }
 
-    //CONSULTAR SITUACAO DO ALUGUEL (S/N)
-    public boolean getAlugado(){
-        return this.alugado;
+    public String getModelo() {
+        return modelo;
     }
 
-    //ALTERAR NOME SITUACAO DO ALUGUEL (S/N)
-    public void setAlugado(boolean new_alugado){
-        this.alugado = new_alugado;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
-    //CONSULTAR VALOR DO ALUGUEL
-    public double getVal_alug(){
-        return this.val_alug;
+    public String getCor() {
+        return cor;
     }
 
-    //ALTERAR VALOR DO ALUGUEL
-    public void setVal_alug(double new_val_alug){
-        this.val_alug = new_val_alug;
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getChassi() {
+        return chassi;
+    }
+
+    public void setChassi(String chassi) {
+        this.chassi = chassi;
+    }
+
+    public int getAno_fab() {
+        return ano_fab;
+    }
+
+    public void setAno_fab(int ano_fab) {
+        this.ano_fab = ano_fab;
+    }
+
+    public boolean isAlugado() {
+        return alugado;
+    }
+
+    public void setAlugado(boolean alugado) {
+        this.alugado = alugado;
+    }
+
+    public double getVal_alug() {
+        return val_alug;
+    }
+
+    public void setVal_alug(double val_alug) {
+        this.val_alug = val_alug;
+    }
+    
+    
 }

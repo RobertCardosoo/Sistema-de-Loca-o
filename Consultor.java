@@ -1,40 +1,38 @@
-public class Consultor{
-
+/**
+ *
+ * @author Znoque
+ */
+public class Consultor {
     private int matricula;
     private String nome;
-    private int cpf;    
-    
-    public Consultor(){
+    private int cpf;
 
-    }        
-    
-
-    int getMatricula (){
-        return this.matricula;
+    public Consultor() {
     }
-    
-    void setMatricula (int matricula){
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
-        System.out.println("Matricula setada com sucesso ");
-
     }
 
-    String getNome (){
-        return this.nome;
+    public String getNome() {
+        return nome;
     }
 
-    void setNome (String nome){
+    public void setNome(String nome) {
         this.nome = nome;
-        System.out.println("Nome setado com sucesso ");
-
     }
 
-    int getCpf(){
-        return this.cpf;
+    public int getCpf() {
+        return cpf;
     }
 
-    void setCpf( int cpf){
+    public void setCpf(int cpf) {
         this.cpf = cpf;
-        System.out.println(" Cpf setado com sucesso ");
     }
+    
+    
 }

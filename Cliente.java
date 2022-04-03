@@ -1,73 +1,81 @@
-public class Cliente{           //CLASSE CLIENTE
+/**
+ *
+ * @author Znoque
+ */
+public class Cliente {
     private int id;             //VARIAVEL ID DO TIPO INTEIRO
     private String nome;        //VARIAVEL NOME DO TIPO INTEIRO
-    private int idade;          //VARIAVEL IDADE DO TIPO INTEIRO
-    private int cnh;            //VARIAVEL CNH DO TIPO INTEIRO
-    private int cpf;            //VARIAVEL CPF DO TIPO INTEIRO
+    private int idade;         //VARIAVEL IDADE DO TIPO INTEIRO
+    private String cnh;         //VARIAVEL CNH DO TIPO INTEIRO
+    private String cpf;         //VARIAVEL CPF DO TIPO INTEIRO
     private String endereco;    //VARIAVEL ENEREÇO DO TIPO INTEIRO
 
-    //METÓDO CONSTRUTOR VAZIO 
-    public Cliente(){ 
-        
-    }
-            
-    //CONSULTAR ID
-    public int getId(){
-        return this.id;
+    public Cliente() {
     }
 
-    //ALTERAR ID
-    public void setId(int novo_id){
-        this.id = novo_id;
+    public Cliente(int id, String nome, int idade, String cnh, String cpf, String endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.cnh = cnh;
+        this.cpf = cpf;
+        this.endereco = endereco;
     }
 
-    //CONSULTAR NOME
-    public String getNome(){
-        return this.nome;
+    @Override
+    public String toString() {
+        return "Cliente{ID: " + id + ", Nome: " + nome + ", idade: " + idade + ", CNH:" + cnh + ", CPF: " + cpf + ", Endereco: " + endereco + '}';
+    }
+    
+    
+
+    public int getId() {
+        return id;
     }
 
-    //ALTERAR NOME
-    public void setNome(String novo_nome){
-        this.nome = novo_nome;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    //CONSULTAR IDADE
-    public int getIdade(){
-        return this.idade;
+    public String getNome() {
+        return nome;
     }
 
-    //ALTERAR IDADE
-    public void setIdade(int nova_idade){
-        this.idade = nova_idade;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    //CONSULTAR CNH
-    public int getCNH(){
-        return this.cnh;
+    public int getIdade() {
+        return idade;
     }
 
-    //ALTERAR CNH
-    public void setCNH(int nova_cnh){
-        this.cnh = nova_cnh;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
-    //CONSULTAR CPF
-    public int getCPF(){
-        return this.cpf;
+    public String getCnh() {
+        return cnh;
     }
 
-    //ALTERAR CPF
-    public void setCPF(int novo_cpf){
-        this.cpf = novo_cpf;
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
     }
 
-    //CONSULTAR EBDERECO
-    public String getEndereco(){
-        return this.endereco;
+    public String getCpf() {
+        return cpf;
     }
 
-    //ALTERAR ENDEREÇO
-    public void setEndereco(String novo_endereco){
-        this.endereco = novo_endereco;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+    
+    
 }
