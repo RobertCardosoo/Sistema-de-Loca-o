@@ -15,7 +15,7 @@ public class Consultor{
     
     void setMatricula (int matricula){
         this.matricula = matricula;
-        System.ou.println("Matricula setada com sucesso ");
+        System.out.println("Matricula setada com sucesso ");
 
     }
 

@@ -10,17 +10,7 @@ public class Cliente{           //CLASSE CLIENTE
     public Cliente(){ 
         
     }
-    
-    //METÓDO CONSTRUTOR INICIALIZANDO TODAS AS VARIAVEIS 
-    public Cliente (int id, String nome, int idade, int cnh, int cpf, String endereco){ 
-        setId(id);
-        setNome(nome);
-        setIdade(idade);       
-        setCNH(cnh);
-        setCPF(cpf);
-        setEndereco(endereco);
-    }
-    
+            
     //CONSULTAR ID
     public int getId(){
         return this.id;
