@@ -15,9 +15,10 @@ public class Veiculo {
     private double val_alug;        //VARIAVEL VALOR ALUGADO DO TIPO DOUBLE
 
     public Veiculo() {
+        this.alugado = false;
     }
 
-    public Veiculo(int id, String nome, String fabricante, String modelo, String cor, String placa, String chassi, int ano_fab, boolean alugado, double val_alug) {
+    public Veiculo(int id, String nome, String fabricante, String modelo, String cor, String placa, String chassi, int ano_fab) {
         this.id = id;
         this.nome = nome;
         this.fabricante = fabricante;
@@ -26,9 +27,19 @@ public class Veiculo {
         this.placa = placa;
         this.chassi = chassi;
         this.ano_fab = ano_fab;
-        this.alugado = alugado;
-        this.val_alug = val_alug;
+        this.alugado = false;
     }
+
+    @Override
+    public String toString() {
+        if(alugado){
+            return "{ID: " + id + ", Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + ano_fab + ", Alugado: Sim, valor do Aluguel: " + val_alug + '}';
+        }else{
+            return "{ID: " + id + ", Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + ano_fab + ", Alugado: Não}";
+        }
+        
+    }
+    
     
     public int getId() {
         return id;
