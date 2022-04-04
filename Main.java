@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Znoque
@@ -172,6 +169,7 @@ public class Main {
                                         int estado = Integer.parseInt(JOptionPane.showInputDialog("ATUALIZANDO CADASTRO DO VEICULO\n\nVeiculo Emprestado: " + veiculos.get(i).getModelo()+ "\n\nDigite se o veiculo está alugado:\n1.Sim   0.Não"));
                                         if(estado==1){
                                             veiculos.get(i).setAlugado(true);
+                                            veiculos.get(i).setVal_alug(Double.parseDouble(JOptionPane.showInputDialog("ATUALIZANDO CADASTRO DO VEICULO\n\nValor do Aluguel atual do Veiculo: " + veiculos.get(i).getVal_alug()+ "\n\nDigite o Novo Valor do Aluguel do Veiculo:")));
                                         }else{
                                             veiculos.get(i).setAlugado(false);
                                         }
@@ -187,10 +185,28 @@ public class Main {
                             JOptionPane.showMessageDialog(null, mensagem);
                             break;
                         case 4:
-                            mensagem = "VEICULOS CADASTRADOS\n\n";
                             if(veiculos.size()!=0){
-                                for(Veiculo v: veiculos){
-                                    mensagem += v.toString()+"\n";
+                                //mensagem = "VEICULOS CADASTRADOS\n\n";
+                                int listagem = Integer.parseInt(JOptionPane.showInputDialog("LISTAR VEICULOS\n\n1.Listar Veiculos Disponiveis Para Aluguel\n2.Listar Veiculos Alugados\n3.Listar Todos os Veiculos"));
+                                if(listagem==1){
+                                    mensagem = "VEICULOS DISPONIVEIS PARA ALUGUEL\n\n";
+                                    for(Veiculo v: veiculos){
+                                        if(!v.isAlugado()){
+                                            mensagem += v.toString()+"\n";
+                                        }
+                                    }
+                                }else if(listagem==2){
+                                    mensagem = "VEICULOS ALUGADOS\n\n";
+                                    for(Veiculo v: veiculos){
+                                        if(v.isAlugado()){
+                                            mensagem += v.toString()+"\n";
+                                        }
+                                    }
+                                }else{
+                                    mensagem = "TODOS OS VEICULOS CADASTRADOS\n\n";
+                                    for(Veiculo v: veiculos){
+                                        mensagem += v.toString()+"\n";
+                                    }
                                 }
                             }else{
                                 mensagem = "ERRO\n\nNão há Veiculos Cadastrados!";
@@ -222,8 +238,8 @@ public class Main {
                     }
                     break;
                 case 3:
-                    
-                    break;
+                     
+                   break;
                 case 0:
                     JOptionPane.showMessageDialog(null, "Saindo do Programa...");
                     break;
